@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+    body {
+        background-color: rgb(255, 255, 255);
+        font-family: 'Segoe UI', sans-serif;
+        margin: 0;
+        padding: 0;
+    }
+    h1 {
+        color: rgb(5, 96, 135);
+        text-align: center;
+        font-family: 'Trebuchet MS', 'sans-serif';
+    }
+    h2 {
+        color: rgb(5, 96, 135);
+        font-size: 2vw;
+        font-style: normal;
+        font-family: 'Trebuchet MS', sans-serif;
+        text-align: center;
+        margin: 0.5% 0;
+    }
+
+    p {
+        font-family: 'Segoe UI', sans-serif;
+        color: rgb(5, 96, 135);
+        padding: 2%;
+        text-align: left;
+        margin-top: 2%;
+        margin-left: 2%;
+        margin-right: 2%;
+        margin-bottom: 2%;
+    }
+    nav {
+        background-color: rgb(0, 127, 101);
+        text-align: center;
+        padding: 1%;
+    }
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+    }
+    li {
+        display: inline-block;
+        margin-right: 2%;
+    }
+    li a {
+        display: block;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        color: white;
+        text-decoration: none;
+        font-size: medium;
+        padding: 10px 20px;
+    }
+    li a:hover {
+        background-color: rgba(255, 255, 255, 0.2);
+    }
+    .section {
+        background-color: white;
+        padding: 5%;
+        margin: 2% auto;
+        width: 90%;
+        box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    }
+    .staff-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        text-align: center;
+    }
+    .staff-member {
+        flex: 1;
+        max-width: 200px;
+        text-align: center;
+        margin: 5% auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .staff-member img {
+        width: 90%;
+        height: 130%;
+        object-fit: cover;
+        border-radius: 50%;
+        box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    }
+    </style>
+    <title>UPrep MUN</title>
+</head>
+<link rel="icon" type="image/png" href="{{ url_for('static', filename='upreplogo.png') }}">
+<body>
+    <nav>
+        <ul>
+            <li><a href="/">HOME</a></li>
+            <li><a href="/about">ABOUT</a></li>
+            <li><a href="/registration">REGISTRATION</a></li>
+            <li><a href="/committees">COMMITTEES</a></li>
+            <li><a href="/contact">CONTACT</a></li>
+        </ul>
+    </nav>
+
+    <div class="section">
+        <h2>ABOUT</h2>
+        <p>
+            University Prep is a 6-12 independent school in Seattle that focuses on fostering intellectual courage and social responsibility. After the first successful conference, the MUN club is proud to announce the second iteration of UPrep Model United Nations (UPrep MUN). With an emphasis on critical thinking skills and diplomacy, the conference strives to create a platform for debate, collaboration, and problem-solving in the context of real-world issues. UPrep MUN is led by the passionate students of UPrep’s MUN club. The UPrep MUN club believes the conference will build and empower the next generation of leaders.
+        </p>
+    </div>
+
+    <div class="section">
+        <h2>SECRETARIAT / STAFF</h2>
+        <div class="staff-container">
+            <div class="staff-member">
+                <img src="{{ url_for('static', filename='aslan.png') }}" alt="Aslan Malik">
+                <p>Aslan Malik</p>
+            </div>
+            <div class="staff-member">
+                <img src="{{ url_for('static', filename='anousha.png') }}" alt="Anousha Mukherjee">
+                <p>Anousha Mukherjee</p>
+            </div>
+            <div class="staff-member">
+                <img src="{{ url_for('static', filename='noah.png') }}" alt="Noah Roth">
+                <p>Noah Roth</p>
+            </div>
+            <div class="staff-member">
+                <img src="{{ url_for('static', filename='sid.png') }}" alt="Siddharth Ramanathan">
+                <p>Siddharth Ramanathan</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
