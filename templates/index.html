@@ -2,129 +2,94 @@
 <html>
 <head>
     <style>
-        body {
-            background-color: rgb(255, 255, 255);
-            font-family: 'Segoe UI', sans-serif;
-            margin: 0;
-            padding: 0;
-        }
-        h1, h2 {
-            color: rgb(5, 96, 135);
-            text-align: center;
-            font-family: 'Trebuchet MS', sans-serif;
-        }
-        h2 {
-            font-size: 2vw;
-            margin: 1% 0;
-        }
-        nav {
-            background-color: rgb(0, 127, 101);
-            text-align: center;
-            padding: 1%;
-        }
-        ul {
-            list-style-type: none;
-            margin: 0;
-            padding: 0;
-        }
-        li {
-            display: inline-block;
-            margin-right: 2%;
-        }
-        li a {
-            color: white;
-            text-decoration: none;
-            font-size: medium;
-            padding: 10px 20px;
-        }
-        li a:hover {
-            background-color: rgba(255, 255, 255, 0.2);
-        }
-        .toggle-button {
-            display: block;
-            margin: 2% auto;
-            padding: 10px 20px;
-            background-color: rgb(0, 127, 101);
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 1em;
-        }
-        .toggle-button:hover {
-            background-color: rgb(0, 100, 85);
-        }
-        .schedule-table {
-            margin: 2% auto;
-            border-collapse: collapse;
-            width: 60%;
-            display: none;
-        }
-        .schedule-table th, .schedule-table td {
-            padding: 1%;
-            border: 1px solid #ddd;
-            text-align: center;
-        }
-        .schedule-table th {
-            background-color: rgb(5, 96, 135);
-            color: white;
-        }
-        .slideshow-container {
-            position: relative;
-            max-width: 80%;
-            margin: 2% auto;
-            text-align: center;
-        }
-        .slides {
-            display: none;
-            width: 80%;
-            height: auto;
-            max-height: 400px;
-            margin: auto;
-            border-radius: 2%;
-        }
-        .prev, .next {
-            cursor: pointer;
-            position: absolute;
-            top: 50%;
-            width: auto;
-            margin-top: -22px;
-            padding: 16px;
-            color: white;
-            font-weight: bold;
-            font-size: 18px;
-            transition: 0.3s;
-            user-select: none;
-        }
-        .prev {
-            left: 0;
-        }
-        .next {
-            right: 0;
-        }
-        .prev:hover, .next:hover {
-            background-color: rgba(0, 0, 0, 0.8);
-        }
-        .dots-container {
-            text-align: center;
-            margin-top: 10px;
-        }
-        .dot {
-            height: 15px;
-            width: 15px;
-            margin: 0 2px;
-            background-color: #bbb;
-            border-radius: 50%;
-            display: inline-block;
-            transition: background-color 0.6s ease;
-            cursor: pointer;
-        }
-        .dot.active {
-            background-color: #717171;
-        }
+    body {
+        background-color: rgb(255, 255, 255);
+        font-family: 'Segoe UI', sans-serif;
+        margin: 0;
+        padding: 0;
+    }
+    h1 {
+        color: rgb(5, 96, 135);
+        text-align: center;
+        font-family: 'Trebuchet MS', 'sans-serif';
+    }
+    h2 {
+        color: rgb(5, 96, 135);
+        font-size: 2vw;
+        font-style: normal;
+        font-family: 'Trebuchet MS', sans-serif;
+        text-align: center;
+        margin: 0.5% 0;
+    }
+
+    p {
+        font-family: 'Segoe UI', sans-serif;
+        color: rgb(5, 96, 135);
+        padding: 2%;
+        text-align: left;
+        margin-top: 2%;
+        margin-left: 2%;
+        margin-right: 2%;
+        margin-bottom: 2%;
+    }
+    nav {
+        background-color: rgb(0, 127, 101);
+        text-align: center;
+        padding: 1%;
+    }
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+    }
+    li {
+        display: inline-block;
+        margin-right: 2%;
+    }
+    li a {
+        display: block;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        color: white;
+        text-decoration: none;
+        font-size: medium;
+        padding: 10px 20px;
+    }
+    li a:hover {
+        background-color: rgba(255, 255, 255, 0.2);
+    }
+    .section {
+        background-color: white;
+        padding: 5%;
+        margin: 2% auto;
+        width: 90%;
+        box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    }
+    .staff-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        text-align: center;
+    }
+    .staff-member {
+        flex: 1;
+        max-width: 200px;
+        text-align: center;
+        margin: 5% auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .staff-member img {
+        width: 90%;
+        height: 130%;
+        object-fit: cover;
+        border-radius: 50%;
+        box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    }
     </style>
     <title>UPrep MUN</title>
 </head>
+    <link rel="icon" type="image/png" href="/static/upreplogo.png">
 <body>
     <nav>
         <ul>
@@ -135,75 +100,218 @@
             <li><a href="/templates/contact.html">CONTACT</a></li>
         </ul>
     </nav>
-    
+    <div class="section">
+        <h2>ABOUT</h2>
+        <p>
+            University Prep is a 6-12 independent school in Seattle that focuses on fostering intellectual courage and social responsibility. After the first successful conference, the MUN club is proud to announce the second iteration of UPrep Model United Nations (UPrep MUN). With an emphasis on critical thinking skills and diplomacy, the conference strives to create a platform for debate, collaboration, and problem-solving in the context of real-world issues. UPrep MUN is led by the passionate students of UPrep’s MUN club. The UPrep MUN club believes the conference will build and empower the next generation of leaders.
+        </p>
+    </div>
+    <div class="section">
+        <h2>SECRETARIAT / STAFF</h2>
+        <div class="staff-container">
+            <div class="staff-member">
+                <img src="/static/aslan.png" alt="aslan">
+                <p>Aslan Malik</p>
+            </div>
+            <div class="staff-member">
+                <img src="/static/anousha.png" alt="anousha">
+                <p>Anousha Mukherjee</p>
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+    body {
+        background-color: rgb(255, 255, 255);
+        font-family: 'Segoe UI', sans-serif;
+        margin: 0;
+        padding: 0;
+    }
+    h1 {
+        color: rgb(5, 96, 135);
+        text-align: center;
+        font-family: 'Trebuchet MS', 'sans-serif';
+    }
+    h2 {
+        color: rgb(5, 96, 135);
+        font-size: 2vw;
+        font-style: normal;
+        font-family: 'Trebuchet MS', sans-serif;
+        text-align: center;
+        margin: 1% 0;
+    }
+    p {
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        color: white;
+        margin: 0;
+        text-align: center;
+        font-size: 0.8em;
+    }
+    nav {
+        background-color: rgb(0, 127, 101);
+        text-align: center;
+        padding: 1%;
+    }
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+    }
+    li {
+        display: inline-block;
+        margin-right: 2%;
+    }
+    li a {
+        display: block;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        color: white;
+        text-decoration: none;
+        font-size: medium;
+        padding: 10px 20px;
+    }
+    li a:hover {
+        background-color: rgba(255, 255, 255, 0.2);
+    }
+    .container {
+        margin: 0;
+        padding: 0;
+    }
+    .image-container {
+        text-align: center;
+        margin: auto;
+        margin-bottom: 5%;
+    }
+    .school-image {
+        width: 20%;
+        max-width: 200px;
+        height: auto;
+    }
+    .about-MUN {
+        background-color: white;
+        padding: 3%;
+        text-align: center;
+        }
+    .schedule-table {
+        margin: 2% auto;
+        border-collapse: collapse;
+        width: 60%;
+        display: none;
+    }
+    .schedule-table th, .schedule-table td {
+        padding: 1%;
+        border-bottom: 1px solid #ddd;
+        text-align: center;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+    .schedule-table th {
+        background-color: rgb(5, 96, 135);
+        color: white;
+    }
+    .toggle-button {
+        display: block;
+        margin: 2% auto;
+        padding: 10px 20px;
+        background-color:rgb(0, 127, 101);
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 1em;
+        font-family: 'Segoe UI', sans-serif;
+    }
+    .toggle-button:hover {
+        background-color: rgb(0, 127, 101);
+    }
+    </style>
+    <title>UPrep MUN</title>
+</head>
+    <link rel="icon" type="image/png" href="/static/upreplogo.png">
+<body>
+    <nav>
+        <ul>
+            <li><a href="/templates/index.html">HOME</a></li>
+            <li><a href="/templates/about.html">ABOUT</a></li>
+            <li><a href="/templates/registration.html">REGISTRATION</a></li>
+            <li><a href="/templates/committees.html">COMMITTEES</a></li>
+            <li><a href="/templates/contact.html">CONTACT</a></li>
+        </ul>
+    </nav>
+    <div class="container">
+        <div class="about-MUN">
+            <h2><b>Welcome to the 2nd UPrep MUN Conference!</b></h2>
+            <h2><b>UPrep MUN will be held on May 16th, 2025</b></h2>
+        </div>
+    </div>
+    <div class="image-container">
+        <img src="/static/upreppumas.png" alt="UPrep MUN" class="school-image">
+    </div>
     <div class="schedule">
-        <button class="toggle-button" onclick="toggleSchedule()">View Schedule</button>
+        <button class="toggle-button" id="toggleButton" onclick="toggleSchedule()">View Schedule</button>
         <table class="schedule-table" id="scheduleTable">
             <tr>
                 <th>Event</th>
                 <th>Time</th>
             </tr>
-            <tr><td>Check-In/Registration</td><td>9:00 AM – 9:30 AM</td></tr>
-            <tr><td>Opening ceremony</td><td>9:30 AM – 10:00 AM</td></tr>
-            <tr><td>Committee Session 1</td><td>10:00 AM – 11:00 AM</td></tr>
-            <tr><td>Break</td><td>11:00 AM – 11:15 AM</td></tr>
-            <tr><td>Committee Session 2</td><td>11:15 AM – 12:00 PM</td></tr>
-            <tr><td>Lunch</td><td>12:00 PM – 1:00 PM</td></tr>
-            <tr><td>Committee Session 3</td><td>1:00 PM – 2:30 PM</td></tr>
-            <tr><td>Break</td><td>2:30 PM – 2:45 PM</td></tr>
-            <tr><td>Committee Session 4</td><td>2:45 PM – 3:45 PM</td></tr>
-            <tr><td>Committee Photos</td><td>3:45 PM – 4:00 PM</td></tr>
-            <tr><td>FunMUN/DAIS review</td><td>4:00 PM – 4:30 PM</td></tr>
-            <tr><td>Closing ceremony</td><td>4:30 PM – 5:00 PM</td></tr>
+            <tr>
+                <td>Check-In/Registration</td>
+                <td>9:00 AM – 9:30 AM</td>
+            </tr>
+            <tr>
+                <td>Opening ceremony</td>
+                <td>9:30 AM – 10:00 AM</td>
+            </tr>
+            <tr>
+                <td>Committee Session 1</td>
+                <td>10:00 AM – 11:00 AM</td>
+            </tr>
+            <tr>
+                <td>Break</td>
+                <td>11:00 AM – 11:15 AM</td>
+            </tr>
+            <tr>
+                <td>Committee Session 2</td>
+                <td>11:15 AM – 12:00 PM</td>
+            </tr>
+            <tr>
+                <td>Lunch</td>
+                <td>12:00 PM – 1:00 PM</td>
+            </tr>
+            <tr>
+                <td>Committee Session 3</td>
+                <td>1:00 PM – 2:30 PM</td>
+            </tr>
+            <tr>
+                <td>Break</td>
+                <td>2:30 PM – 2:45 PM</td>
+            </tr>
+            <tr>
+                <td>Committee Session 4</td>
+                <td>2:45 PM – 3:45 PM</td>
+            </tr>
+            <tr>
+                <td>Committee Photos</td>
+                <td>3:45 PM – 4:00 PM</td>
+            </tr>
+            <tr>
+                <td>FunMUN/DAIS review</td>
+                <td>4:00 PM – 4:30 PM</td>
+            </tr>
+            <tr>
+                <td>Closing ceremony</td>
+                <td>4:30 PM – 5:00 PM</td>
+            </tr>
         </table>
     </div>
-
-    <div class="slideshow-container">
-        <img class="slides" src="/static/media1.jpg" alt="Slide 1">
-        <img class="slides" src="/static/media2.jpg" alt="Slide 2">
-        <img class="slides" src="/static/media3.jpg" alt="Slide 3">
-        <img class="slides" src="/static/media4.jpg" alt="Slide 4">
-
-        <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
-        <a class="next" onclick="changeSlide(1)">&#10095;</a>
-    </div>
-
-    <div class="dots-container">
-        <span class="dot" onclick="currentSlide(1)"></span>
-        <span class="dot" onclick="currentSlide(2)"></span>
-        <span class="dot" onclick="currentSlide(3)"></span>
-        <span class="dot" onclick="currentSlide(4)"></span>
-    </div>
-
     <script>
-        let slideIndex = 1;
-        showSlides(slideIndex);
-
-        function changeSlide(n) {
-            showSlides(slideIndex += n);
-        }
-
-        function currentSlide(n) {
-            showSlides(slideIndex = n);
-        }
-
-        function showSlides(n) {
-            const slides = document.getElementsByClassName("slides");
-            const dots = document.getElementsByClassName("dot");
-
-            if (n > slides.length) slideIndex = 1;
-            if (n < 1) slideIndex = slides.length;
-
-            for (let slide of slides) slide.style.display = "none";
-            for (let dot of dots) dot.className = dot.className.replace(" active", "");
-
-            slides[slideIndex - 1].style.display = "block";
-            dots[slideIndex - 1].className += " active";
-        }
-
         function toggleSchedule() {
-            const table = document.getElementById("scheduleTable");
-            table.style.display = table.style.display === "none" ? "table" : "none";
+            const scheduleTable = document.getElementById('scheduleTable');
+            const toggleButton = document.getElementById('toggleButton');
+            if (scheduleTable.style.display === 'none' || scheduleTable.style.display === '') {
+                scheduleTable.style.display = 'table';
+                toggleButton.textContent = 'Close Schedule';
+            } else {
+                scheduleTable.style.display = 'none';
+                toggleButton.textContent = 'View Schedule';
+            }
         }
     </script>
 </body>
