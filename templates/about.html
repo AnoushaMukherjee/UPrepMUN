@@ -86,67 +86,6 @@
         border-radius: 50%;
         box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
     }
-    
-    /* Slideshow Styles */
-    .slideshow-container {
-        position: relative;
-        margin: auto;
-        max-width: 90%;
-        overflow: hidden;
-    }
-
-    .slides {
-        display: none;
-    }
-
-    .slides img {
-        width: 100%;
-        border-radius: 10px;
-    }
-
-    .prev, .next {
-        cursor: pointer;
-        position: absolute;
-        top: 50%;
-        width: auto;
-        padding: 10px;
-        margin-top: -22px;
-        color: white;
-        font-weight: bold;
-        font-size: 18px;
-        border-radius: 0 3px 3px 0;
-        user-select: none;
-    }
-
-    .next {
-        right: 0;
-        border-radius: 3px 0 0 3px;
-    }
-
-    .prev:hover, .next:hover {
-        background-color: rgba(0,0,0,0.8);
-    }
-
-    .dots {
-        text-align: center;
-        margin-top: 10px;
-    }
-
-    .dot {
-        cursor: pointer;
-        height: 15px;
-        width: 15px;
-        margin: 0 2px;
-        background-color: #bbb;
-        border-radius: 50%;
-        display: inline-block;
-        transition: background-color 0.6s ease;
-    }
-
-    .active {
-        background-color: #717171;
-    }
-
     </style>
     <title>UPrep MUN</title>
 </head>
@@ -161,15 +100,12 @@
             <li><a href="/templates/contact.html">CONTACT</a></li>
         </ul>
     </nav>
-
-    <!-- Existing Content -->
     <div class="section">
         <h2>ABOUT</h2>
         <p>
             University Prep is a 6-12 independent school in Seattle that focuses on fostering intellectual courage and social responsibility. After the first successful conference, the MUN club is proud to announce the second iteration of UPrep Model United Nations (UPrep MUN). With an emphasis on critical thinking skills and diplomacy, the conference strives to create a platform for debate, collaboration, and problem-solving in the context of real-world issues. UPrep MUN is led by the passionate students of UPrep’s MUN club. The UPrep MUN club believes the conference will build and empower the next generation of leaders.
         </p>
     </div>
-
     <div class="section">
         <h2>SECRETARIAT / STAFF</h2>
         <div class="staff-container">
@@ -191,56 +127,5 @@
             </div>
         </div>
     </div>
-
-    <!-- Slideshow Section -->
-    <div class="slideshow-container">
-        <div class="slides">
-            <img src="/static/slide1.jpg" alt="Slide 1">
-        </div>
-        <div class="slides">
-            <img src="/static/slide2.jpg" alt="Slide 2">
-        </div>
-        <div class="slides">
-            <img src="/static/slide3.jpg" alt="Slide 3">
-        </div>
-
-        <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
-        <a class="next" onclick="changeSlide(1)">&#10095;</a>
-    </div>
-
-    <div class="dots">
-        <span class="dot" onclick="currentSlide(1)"></span>
-        <span class="dot" onclick="currentSlide(2)"></span>
-        <span class="dot" onclick="currentSlide(3)"></span>
-    </div>
-
-    <script>
-        let slideIndex = 1;
-        showSlides(slideIndex);
-
-        function changeSlide(n) {
-            showSlides(slideIndex += n);
-        }
-
-        function currentSlide(n) {
-            showSlides(slideIndex = n);
-        }
-
-        function showSlides(n) {
-            let i;
-            let slides = document.getElementsByClassName("slides");
-            let dots = document.getElementsByClassName("dot");
-            if (n > slides.length) {slideIndex = 1}    
-            if (n < 1) {slideIndex = slides.length}
-            for (i = 0; i < slides.length; i++) {
-                slides[i].style.display = "none";  
-            }
-            for (i = 0; i < dots.length; i++) {
-                dots[i].className = dots[i].className.replace(" active", "");
-            }
-            slides[slideIndex-1].style.display = "block";  
-            dots[slideIndex-1].className += " active";
-        }
-    </script>
 </body>
 </html>
