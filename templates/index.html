@@ -86,110 +86,56 @@
         border-radius: 50%;
         box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
     }
-    </style>
-    <title>UPrep MUN</title>
-</head>
-    <link rel="icon" type="image/png" href="/static/upreplogo.png">
-<body>
-    <nav>
-        <ul>
-            <li><a href="/templates/index.html">HOME</a></li>
-            <li><a href="/templates/about.html">ABOUT</a></li>
-            <li><a href="/templates/registration.html">REGISTRATION</a></li>
-            <li><a href="/templates/committees.html">COMMITTEES</a></li>
-            <li><a href="/templates/contact.html">CONTACT</a></li>
-        </ul>
-    </nav>
-    <div class="section">
-        <h2>ABOUT</h2>
-        <p>
-            University Prep is a 6-12 independent school in Seattle that focuses on fostering intellectual courage and social responsibility. After the first successful conference, the MUN club is proud to announce the second iteration of UPrep Model United Nations (UPrep MUN). With an emphasis on critical thinking skills and diplomacy, the conference strives to create a platform for debate, collaboration, and problem-solving in the context of real-world issues. UPrep MUN is led by the passionate students of UPrep’s MUN club. The UPrep MUN club believes the conference will build and empower the next generation of leaders.
-        </p>
-    </div>
-    <div class="section">
-        <h2>SECRETARIAT / STAFF</h2>
-        <div class="staff-container">
-            <div class="staff-member">
-                <img src="/static/aslan.png" alt="aslan">
-                <p>Aslan Malik</p>
-            </div>
-            <div class="staff-member">
-                <img src="/static/anousha.png" alt="anousha">
-                <p>Anousha Mukherjee</p>
-<!DOCTYPE html>
-<html>
-<head>
-    <style>
-    body {
-        background-color: rgb(255, 255, 255);
-        font-family: 'Segoe UI', sans-serif;
-        margin: 0;
-        padding: 0;
-    }
-    h1 {
-        color: rgb(5, 96, 135);
-        text-align: center;
-        font-family: 'Trebuchet MS', 'sans-serif';
-    }
-    h2 {
-        color: rgb(5, 96, 135);
-        font-size: 2vw;
-        font-style: normal;
-        font-family: 'Trebuchet MS', sans-serif;
-        text-align: center;
-        margin: 1% 0;
-    }
-    p {
-        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-        color: white;
-        margin: 0;
-        text-align: center;
-        font-size: 0.8em;
-    }
-    nav {
-        background-color: rgb(0, 127, 101);
-        text-align: center;
-        padding: 1%;
-    }
-    ul {
-        list-style-type: none;
-        margin: 0;
-        padding: 0;
-    }
-    li {
-        display: inline-block;
-        margin-right: 2%;
-    }
-    li a {
-        display: block;
-        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-        color: white;
-        text-decoration: none;
-        font-size: medium;
-        padding: 10px 20px;
-    }
-    li a:hover {
-        background-color: rgba(255, 255, 255, 0.2);
-    }
-    .container {
-        margin: 0;
-        padding: 0;
-    }
-    .image-container {
-        text-align: center;
+
+    .slideshow-container {
+        position: relative;
+        max-width: 600px;
         margin: auto;
-        margin-bottom: 5%;
+        text-align: center;
+    }
+    .slides {
+        display: none;
+    }
+    .prev, .next {
+        position: absolute;
+        top: 50%;
+        padding: 16px;
+        background-color: rgba(0, 0, 0, 0.5);
+        color: white;
+        font-size: 18px;
+        border: none;
+        cursor: pointer;
+        user-select: none;
+        transform: translate(0, -50%);
+    }
+    .next {
+        right: 0;
+    }
+    .prev {
+        left: 0;
+    }
+    .dot-container {
+        text-align: center;
+        padding: 10px;
+    }
+    .dot {
+        height: 15px;
+        width: 15px;
+        margin: 0 2px;
+        background-color: #bbb;
+        border-radius: 50%;
+        display: inline-block;
+        transition: background-color 0.6s ease;
+        cursor: pointer;
+    }
+    .active {
+        background-color: #717171;
     }
     .school-image {
         width: 20%;
         max-width: 200px;
         height: auto;
     }
-    .about-MUN {
-        background-color: white;
-        padding: 3%;
-        text-align: center;
-        }
     .schedule-table {
         margin: 2% auto;
         border-collapse: collapse;
@@ -244,6 +190,77 @@
     <div class="image-container">
         <img src="/static/upreppumas.png" alt="UPrep MUN" class="school-image">
     </div>
+
+    <!-- Slideshow -->
+    <div class="slideshow-container">
+        <div class="slides">
+            <img src="/static/media1.jpg" style="width:100%">
+        </div>
+        <div class="slides">
+            <img src="/static/media2.jpg" style="width:100%">
+        </div>
+        <div class="slides">
+            <img src="/static/media3.jpg" style="width:100%">
+        </div>
+        <div class="slides">
+            <img src="/static/media4.jpg" style="width:100%">
+        </div>
+        <div class="slides">
+            <img src="/static/media5.jpg" style="width:100%">
+        </div>
+        <div class="slides">
+            <img src="/static/media6.jpg" style="width:100%">
+        </div>
+        <div class="slides">
+            <img src="/static/media7.jpg" style="width:100%">
+        </div>
+        <div class="slides">
+            <img src="/static/media8.jpg" style="width:100%">
+        </div>
+        <div class="slides">
+            <img src="/static/media9.jpg" style="width:100%">
+        </div>
+        <div class="slides">
+            <img src="/static/media10.jpg" style="width:100%">
+        </div>
+        <div class="slides">
+            <img src="/static/media11.jpg" style="width:100%">
+        </div>
+        <div class="slides">
+            <img src="/static/media12.jpg" style="width:100%">
+        </div>
+        <div class="slides">
+            <img src="/static/media13.jpg" style="width:100%">
+        </div>
+        <div class="slides">
+            <img src="/static/media14.jpg" style="width:100%">
+        </div>
+        <div class="slides">
+            <img src="/static/media15.jpg" style="width:100%">
+        </div>
+
+        <!-- Navigation arrows -->
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+    <div class="dot-container">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+        <span class="dot" onclick="currentSlide(4)"></span>
+        <span class="dot" onclick="currentSlide(5)"></span>
+        <span class="dot" onclick="currentSlide(6)"></span>
+        <span class="dot" onclick="currentSlide(7)"></span>
+        <span class="dot" onclick="currentSlide(8)"></span>
+        <span class="dot" onclick="currentSlide(9)"></span>
+        <span class="dot" onclick="currentSlide(10)"></span>
+        <span class="dot" onclick="currentSlide(11)"></span>
+        <span class="dot" onclick="currentSlide(12)"></span>
+        <span class="dot" onclick="currentSlide(13)"></span>
+        <span class="dot" onclick="currentSlide(14)"></span>
+        <span class="dot" onclick="currentSlide(15)"></span>
+    </div>
+
     <div class="schedule">
         <button class="toggle-button" id="toggleButton" onclick="toggleSchedule()">View Schedule</button>
         <table class="schedule-table" id="scheduleTable">
@@ -302,6 +319,32 @@
         </table>
     </div>
     <script>
+        let slideIndex = 1;
+        showSlides(slideIndex);
+
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+            let slides = document.getElementsByClassName("slides");
+            let dots = document.getElementsByClassName("dot");
+            if (n > slides.length) {slideIndex = 1}
+            if (n < 1) {slideIndex = slides.length}
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            for (let i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " active";
+        }
+        
         function toggleSchedule() {
             const scheduleTable = document.getElementById('scheduleTable');
             const toggleButton = document.getElementById('toggleButton');
