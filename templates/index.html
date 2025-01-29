@@ -103,19 +103,21 @@
     .toggle-button:hover {
         background-color: rgb(0, 127, 101);
     }
-    /* Slideshow styles */
     .slideshow-container {
         position: relative;
         max-width: 80%;
         margin: auto;
         text-align: center;
     }
+    
+    .slideshow-image {
+        width: 80%;
+        max-height: 70vh;
+        object-fit: contain;
+    }
+
     .slide {
         display: none;
-    }
-    
-    .slide img {
-    width: 50%;
     }
 
     .prev, .next {
@@ -163,35 +165,35 @@
         <img src="/static/upreppumas.png" alt="UPrep MUN" class="school-image">
     </div>
 
-    <div class="slideshow-container">
-        <div class="slide">
-            <img src="/static/media1.png" style="width:100%; max-width: 200px;">
-        </div>
-        <div class="slide">
-            <img src="/static/media2.png" style="width:100%; max-width: 200px;">
-        </div>
-        <div class="slide">
-            <img src="/static/media3.png" style="width:100%; max-width: 200px;">
-        </div>
-        <div class="slide">
-            <img src="/static/media4.png" style="width:100%; max-width: 200px;">
-        </div>
-        <div class="slide">
-            <img src="/static/media5.png" style="width:100%; max-width: 200px;">
-        </div>
-        <div class="slide">
-            <img src="/static/media6.png" style="width:100%; max-width: 200px;">
-        </div>
-        <div class="slide">
-            <img src="/static/media7.png" style="width:100%; max-width: 200px;">
-        </div>
-        <div class="slide">
-            <img src="/static/media8.png" style="width:100%; max-width: 200px;">
-        </div>
-        
-        <button class="prev" onclick="plusSlides(-1)">&#10094;</button>
-        <button class="next" onclick="plusSlides(1)">&#10095;</button>
+<div class="slideshow-container">
+    <div class="slide">
+        <img src="/static/media1.png" class="slideshow-image">
     </div>
+    <div class="slide">
+        <img src="/static/media2.png" class="slideshow-image">
+    </div>
+    <div class="slide">
+        <img src="/static/media3.png" class="slideshow-image">
+    </div>
+    <div class="slide">
+        <img src="/static/media4.png" class="slideshow-image">
+    </div>
+    <div class="slide">
+        <img src="/static/media5.png" class="slideshow-image">
+    </div>
+    <div class="slide">
+        <img src="/static/media6.png" class="slideshow-image">
+    </div>
+    <div class="slide">
+        <img src="/static/media7.png" class="slideshow-image">
+    </div>
+    <div class="slide">
+        <img src="/static/media8.png" class="slideshow-image">
+    </div>
+
+    <button class="prev" onclick="plusSlides(-1)">&#10094;</button>
+    <button class="next" onclick="plusSlides(1)">&#10095;</button>
+</div>
 
     <div class="schedule">
         <button class="toggle-button" id="toggleButton" onclick="toggleSchedule()">View Schedule</button>
