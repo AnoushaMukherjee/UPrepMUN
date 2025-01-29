@@ -253,20 +253,22 @@
 
     <script>
         let slideIndex = 0;
+        showSlides(); // Initialize slideshow
         
         function showSlides() {
             let slides = document.getElementsByClassName("slide");
         
+            // Fix for slide index looping issue
             if (slideIndex >= slides.length) { slideIndex = 0; }
             if (slideIndex < 0) { slideIndex = slides.length - 1; }
         
+            // Hide all slides
             for (let i = 0; i < slides.length; i++) {
                 slides[i].style.display = "none";
             }
         
-            if (slides.length > 0 && slideIndex < slides.length) {
-                slides[slideIndex].style.display = "block";
-            }
+            // Ensure the current slide is visible
+            slides[slideIndex].style.display = "block";
         }
         
         function plusSlides(n) {
@@ -274,9 +276,11 @@
             showSlides();
         }
         
+        // Auto-run the function on DOM load
         document.addEventListener("DOMContentLoaded", function () {
             showSlides();
         });
+
 
         function toggleSchedule() {
             const scheduleTable = document.getElementById('scheduleTable');
