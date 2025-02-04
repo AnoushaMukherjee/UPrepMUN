@@ -8,6 +8,10 @@
         margin: 0;
         padding: 0;
     }
+    html, body {
+        scroll-behavior: smooth;
+    }
+
     h1 {
         color: rgb(5, 96, 135);
         text-align: center;
@@ -307,6 +311,25 @@
                 toggleButton.textContent = 'View Schedule';
             }
         }
+    </script>
+    <script>
+        window.onload = function () {
+            let scrollHeight = document.body.scrollHeight; // Get total scrollable height
+            
+            // Scroll down smoothly
+            window.scrollTo({
+                top: scrollHeight,
+                behavior: "smooth"
+            });
+    
+            // Scroll back up after a delay
+            setTimeout(() => {
+                window.scrollTo({
+                    top: 0,
+                    behavior: "smooth"
+                });
+            }, 2000); // Adjust delay as needed
+        };
     </script>
 </body>
 </html>
