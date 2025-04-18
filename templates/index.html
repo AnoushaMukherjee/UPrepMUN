@@ -313,13 +313,12 @@
     </script>
     <script>
         window.onload = function () {
-            let scrollHeight = document.body.scrollHeight; // Get total scrollable height
-            
-            // Scroll down smoothly
             window.scrollTo({
-                top: scrollHeight,
+                top: 500,
                 behavior: "smooth"
             });
+        };
+
     
             // Scroll back up after a delay
             setTimeout(() => {
