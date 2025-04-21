@@ -21,6 +21,8 @@
         text-align: left;
         margin: 1% 0;
         margin-left: 5%;
+        opacity: 0;
+        animation: fadeIn 1.5s forwards;
     }
     p {
         font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
@@ -29,6 +31,8 @@
         margin-right: 30%;
         text-align: justify;
         font-size: 1em;
+        opacity: 0;
+        animation: fadeIn 2s forwards;
     }
     nav {
         background-color: rgb(0, 127, 101);
@@ -68,6 +72,13 @@
         margin-top: 3%;
         margin-bottom: 10%;
     }
+
+    /* Animation */
+    @keyframes fadeIn {
+        to {
+            opacity: 1;
+        }
+    }
     </style>
 </head>
     <link rel="icon" type="image/png" href="/static/uprepmunlogo.png">
@@ -85,10 +96,12 @@
         <div class="about-MUN">
             <h2><b>Committee 1: Historical Cold War Committee (US)</b></h2>
             <p>The Historical Cold War Committee will transport delegates back in time to one of history’s most intense geopolitical rivalries, where every decision could alter the balance of power. This committee will traverse the various decades of the Cold War, and delegates will be invited to navigate a variety of conflicts and crises through diplomacy and careful negotiation. Whether it’s de-escalating the Cuban Missile Crisis or escalating it further, preventing the Vietnam War or starting a new proxy war somewhere else, delegates will have the opportunity to change the course of history in this high-stakes committee filled with political intrigue and ideological conflict.</p>
+
             <h2><b>Committee 2: United Nations Conference on Trade and Development (MS)</b></h2>
             <p>The United Nations Conference on Trade and Development (UNCTAD) was founded in 1964 to promote equitable global trade and ease the integration of developing nations into the international market. UNCTAD plays a crucial role in shaping trade policies, offering debt management and fostering safe business practices. Recently, the committee has turned its attention to fast fashion. Emerging in the late 90s, fast fashion is the mass production of cheap clothing to align with topical trends. The industry is responsible for huge amounts of waste, environmental degradation, and the exploitation of workers. In this committee, countries must find ways to balance economic growth with protecting workers and the planet.</p>
+
             <h2><b>Committee 3: Antarctic Crisis (US/MS)</b></h2>
-            <p>The Antarctic Treaty has governed the global community in Antarctica since it entered into force in 1961. It prohibits military activity and the expansion of territorial claims, as well as promoting international cooperation on the continent. Many of the major powers in the world are signatories of the treaty, and collaborate to preserve the neutrality of the Antarctic. However, in the last week shocking developments have rattled the decades long peace in Antarctica. An unknown nation has seized control of key research stations and taken control of other countries’ Antarctic territory. Satellite images reveal a flurry of clandestine activity: massive structures emerging in the snow, mysterious cargo shipments, and encrypted transmissions hinting at something far more sinister than a mere attack on research installations. It is up to the members of the Antarctic Committee to figure out which country is to blame and how to return Antartica to a state of neutrality. Will members choose to uphold international law, forge secret alliances, or scramble to claim their slice of the pie?</p>
+            <p>The Antarctic Treaty has governed the global community in Antarctica since it entered into force in 1961. It prohibits military activity and the expansion of territorial claims, as well as promoting international cooperation on the continent. Many of the major powers in the world are signatories of the treaty, and collaborate to preserve the neutrality of the Antarctic. However, in the last week shocking developments have rattled the decades long peace in Antarctica. An unknown nation has seized control of key research stations and taken control of other countries’ Antarctic territory. Satellite images reveal a flurry of clandestine activity: massive structures emerging in the snow, mysterious cargo shipments, and encrypted transmissions hinting at something far more sinister than a mere attack on research installations. It is up to the members of the Antarctic Committee to figure out which country is to blame and how to return Antarctica to a state of neutrality. Will members choose to uphold international law, forge secret alliances, or scramble to claim their slice of the pie?</p>
         </div>
     </div>
 </body>
